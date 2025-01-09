@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:pet_project/routing/router.dart';
-import 'package:pet_project/ui/splash/splash_view.dart';
 import 'package:pet_project/ui/splash/splash_view_model.dart';
 import 'package:provider/provider.dart';
 
