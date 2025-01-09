@@ -1,28 +1,15 @@
 import 'package:flutter/rendering.dart';
 import 'package:gap/gap.dart';
+import 'package:pet_project/ui/style/colors.dart';
 
+// const double bottomSheetHeight = 76;
 
-// const appBarButtonSize = Size(40, 40);
-const double bottomSheetHeight = 76;
+const paddingH16 = EdgeInsets.symmetric(horizontal: 16);
 
-const padding22 = EdgeInsets.all(22);
-const paddingH20 = EdgeInsets.symmetric(horizontal: 20);
-const paddingH100 = EdgeInsets.symmetric(horizontal: 100);
-const padding2025 = EdgeInsets.symmetric(horizontal: 20, vertical: 25);
-const paddingB66 = EdgeInsets.only(bottom: bottomSheetHeight);
-const paddingL33 = EdgeInsets.only(left: 33);
-
-const gap8 = Gap(8);
-const gap10 = Gap(10);
-const gap12 = Gap(12);
-const gap20 = Gap(20);
+const gap14 = Gap(14);
+const gap16 = Gap(16);
 const gap24 = Gap(24);
-const gap30 = Gap(30);
-const gap32 = Gap(32);
-const gap38 = Gap(38);
+const gap48 = Gap(48);
 
-// const textDefault = TextStyle(
-//     fontSize: 16, fontWeight: FontWeight.w500, height: 22 / 16, color: ProjectColors.white, letterSpacing: 0.02);
-// const textMediumSize = TextStyle(
-//     fontSize: 18, fontWeight: FontWeight.w400, height: 22 / 18, color: ProjectColors.white, letterSpacing: 0.03);
-
+const textBigSize = TextStyle(fontSize: 24, fontWeight: FontWeight.w900, color: ProjectColors.white);
+const textMediumSize = TextStyle(fontWeight: FontWeight.w500, fontSize: 20, color: ProjectColors.white);

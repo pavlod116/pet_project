@@ -1,7 +1,7 @@
-import 'package:auto_route/annotations.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:pet_project/routing/router.gr.dart';
+import 'package:pet_project/service/onboarding_service.dart';
 import 'package:pet_project/ui/splash/splash_view_model.dart';
 import 'package:pet_project/ui/style/colors.dart';
 import 'package:provider/provider.dart';
@@ -19,14 +19,33 @@ class SplashViewPage extends StatefulWidget {
 }
 
 class _SplashViewPageState extends State<SplashViewPage> {
+  final onboardingService = OnboardingService();
+
   @override
   void initState() {
     super.initState();
     final splashModel = Provider.of<SplashViewModel>(context, listen: false);
     splashModel.startAnimation(
       context: context,
-      onSuccess: () => context.router.replaceAll([const HomeViewRoute()]),
+      onSuccess: () => checkViewOnboarding(),
     );
+  }
+
+  void checkViewOnboarding() async {
+    bool hasSeen = await onboardingService.hasSeenOnboarding();
+    if (hasSeen == false) {
+      navigateOnboarding();
+    } else {
+      navigateHome();
+    }
+  }
+
+  void navigateOnboarding() {
+    context.router.replaceAll([const OnboardingViewRoute()]);
+  }
+
+  void navigateHome() {
+    context.router.replaceAll([const HomeViewRoute()]);
   }
 
   @override

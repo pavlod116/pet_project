@@ -29,18 +29,23 @@ class ButtonInteractionColors {
 class ProjectColors {
 
   static const Color background = Color(0xff24262A);
+  static const Color activeIndicatorOnboarding = Color(0xffFFCE1C);
+  static const Color disabledIndicatorOnboarding = Color(0xffE1DBC4);
+  static const Color activeYellowButton = Color(0xffFFCD21);
+  static const Color activeYellowTextButton = Color(0xff24262A);
+  static const Color white = Color(0xffFFFFFF);
 
 
-  // static ButtonInteractionColors buttonColorsBlue = ButtonInteractionColors(
-  //   activeColor: buttonsBlueDefault,
-  //   pressedColor: buttonsBluePressed,
-  //   disabledColor: buttonsDisabled,
-  //   activeInputColor: white,
-  //   hoveredInputColor: white,
-  //   pressedInputColor: white,
-  //   disabledInputColor: white.withOpacity(.48),
-  //   outlineColor: const Color(0x00),
-  // );
+  static ButtonInteractionColors buttonColorsYellow = ButtonInteractionColors(
+    activeColor: activeYellowButton,
+    pressedColor: activeYellowButton.withOpacity(0.4),
+    disabledColor: disabledIndicatorOnboarding,
+    activeInputColor: activeYellowTextButton,
+    hoveredInputColor: activeYellowTextButton,
+    pressedInputColor: activeYellowTextButton.withOpacity(0.4),
+    disabledInputColor: disabledIndicatorOnboarding.withOpacity(0.2),
+    outlineColor: const Color(0x00000000),
+  );
 
 
 }

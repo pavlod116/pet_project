@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pet_project/routing/router.dart';
+import 'package:pet_project/ui/onboarding/onboarding_view_model.dart';
 import 'package:pet_project/ui/splash/splash_view_model.dart';
 import 'package:provider/provider.dart';
 
@@ -18,6 +19,7 @@ class _PetProjectState extends State<PetProject> {
     return MultiProvider(
       providers: [
         ChangeNotifierProvider(create: (context) => SplashViewModel()),
+        ChangeNotifierProvider(create: (_) => OnboardingViewModel()),
       ],
       child: MaterialApp.router(
         debugShowCheckedModeBanner: false,

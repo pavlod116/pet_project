@@ -36,10 +36,10 @@ class SimpleButtonOutlined extends StatefulWidget {
   }) : super(key: key);
 
   @override
-  _SimpleButtonOutlinedState createState() => _SimpleButtonOutlinedState();
+  SimpleButtonOutlinedState createState() => SimpleButtonOutlinedState();
 }
 
-class _SimpleButtonOutlinedState extends State<SimpleButtonOutlined> {
+class SimpleButtonOutlinedState extends State<SimpleButtonOutlined> {
   late double cornerRadius;
   late double iconSize;
   late double textSize;
@@ -61,7 +61,7 @@ class _SimpleButtonOutlinedState extends State<SimpleButtonOutlined> {
   _initProperties() {
     cornerRadius = widget.roundCorners ? 16 * widget.inputScaleFactor : 0;
     iconSize = 24 * widget.inputScaleFactor;
-    textSize = 16 * widget.inputScaleFactor;
+    textSize = 20 * widget.inputScaleFactor;
     containerPadding = (widget.internalPadding ?? const EdgeInsets.symmetric(horizontal: 4)) * widget.inputScaleFactor;
     inputPadding = const EdgeInsets.symmetric(horizontal: 6, vertical: 14) * widget.inputScaleFactor;
     mainAxisAlignment = widget.icon == null || widget.text == null ? MainAxisAlignment.center : MainAxisAlignment.start;
@@ -157,7 +157,7 @@ class _SimpleButtonOutlinedState extends State<SimpleButtonOutlined> {
                               textAlign: TextAlign.center,
                               style: TextStyle(
                                 fontSize: textSize,
-                                fontWeight: FontWeight.w500,
+                                fontWeight: FontWeight.w700,
                                 color: inputColor,
                                 decoration: TextDecoration.none,
                               ),
