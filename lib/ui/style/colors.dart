@@ -29,9 +29,11 @@ class ButtonInteractionColors {
 class ProjectColors {
 
   static const Color background = Color(0xff24262A);
+  static const Color backgroundCard = Color(0xff4E4E4E);
   static const Color activeIndicatorOnboarding = Color(0xffFFCE1C);
   static const Color disabledIndicatorOnboarding = Color(0xffE1DBC4);
   static const Color activeYellowButton = Color(0xffFFCD21);
+  static const Color unselectedItemColor = Color(0xffFFF3C9);
   static const Color activeYellowTextButton = Color(0xff24262A);
   static const Color white = Color(0xffFFFFFF);
 

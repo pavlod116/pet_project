@@ -45,7 +45,7 @@ class _SplashViewPageState extends State<SplashViewPage> {
   }
 
   void navigateHome() {
-    context.router.replaceAll([const HomeViewRoute()]);
+    context.router.replaceAll([const HomeButtonNavBarViewRoute()]);
   }
 
   @override

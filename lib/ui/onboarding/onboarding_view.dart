@@ -10,6 +10,7 @@ import 'onboarding_view_model.dart';
 import '../style/theme.dart';
 import 'package:provider/provider.dart';
 
+@RoutePage()
 class OnboardingViewPage extends StatefulWidget {
   const OnboardingViewPage({super.key});
 
