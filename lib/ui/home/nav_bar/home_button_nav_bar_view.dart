@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:pet_project/ui/style/colors.dart';
 import 'package:provider/provider.dart';
 
+import '../../privacy_policy/privacy_policy_view.dart';
+import '../../teams_of_use/teams_of_use_view.dart';
 import '../home_view.dart';
 import 'home_nav_bar_view_model.dart';
 
@@ -12,8 +14,8 @@ class HomeButtonNavBarViewPage extends StatelessWidget {
 
   final List<Widget> _pages = const [
     HomeViewPage(),
-    Center(child: Text("Privacy Policy", style: TextStyle(fontSize: 24))),
-    Center(child: Text("Terms & Conditions", style: TextStyle(fontSize: 24))),
+    PrivacyPolicyView(),
+    TeamsOfUse(),
   ];
 
   @override

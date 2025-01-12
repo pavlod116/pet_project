@@ -1,30 +1,23 @@
 import 'package:flutter/material.dart';
 import 'package:pet_project/ui/style/colors.dart';
 import 'package:pet_project/ui/style/theme.dart';
-
-const textStyleBig = TextStyle(
-  fontSize: 24,
-  fontWeight: FontWeight.w900,
-  color: ProjectColors.background,
-);
-
-const textStyleMedium = TextStyle(
-  fontSize: 20,
-  fontWeight: FontWeight.w500,
-  color: ProjectColors.background,
-);
-
 class PromoCard extends StatelessWidget {
   const PromoCard({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final mediaQuery = MediaQuery.of(context);
+    final double screenWidth = mediaQuery.size.width;
+
+    final double bigFontSize = screenWidth * 0.06;
+    final double mediumFontSize = screenWidth * 0.045;
+
     return Center(
       child: Stack(
         clipBehavior: Clip.none,
         children: [
           Container(
-            width: MediaQuery.of(context).size.width,
+            width: screenWidth,
             height: 140,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
@@ -34,20 +27,28 @@ class PromoCard extends StatelessWidget {
                 end: Alignment.bottomRight,
               ),
             ),
-            child: const Padding(
-              padding: EdgeInsets.only(left: 16, top: 16, bottom: 16, right: 150),
+            child: Padding(
+              padding: const EdgeInsets.only(left: 16, top: 16, bottom: 16, right: 150),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
                     "Need an\nextra \$200?",
-                    style: textStyleBig,
+                    style: TextStyle(
+                      fontSize: bigFontSize,
+                      fontWeight: FontWeight.w900,
+                      color: ProjectColors.background,
+                    ),
                   ),
                   gap8,
                   Text(
                     "Let AI lend a hand!",
-                    style: textStyleMedium,
+                    style: TextStyle(
+                      fontSize: mediumFontSize,
+                      fontWeight: FontWeight.w500,
+                      color: ProjectColors.background,
+                    ),
                   ),
                 ],
               ),

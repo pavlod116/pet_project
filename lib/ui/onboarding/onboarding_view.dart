@@ -27,7 +27,7 @@ class _OnboardingViewPageState extends State<OnboardingViewPage> {
   }
 
   void navigateHome() {
-    context.router.replaceAll([const HomeViewRoute()]);
+    context.router.replaceAll([const HomeButtonNavBarViewRoute()]);
   }
 
   @override
