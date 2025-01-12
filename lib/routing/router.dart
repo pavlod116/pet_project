@@ -8,5 +8,6 @@ class AppRouter extends $AppRouter {
         AutoRoute(page: SplashViewRoute.page, initial: true),
         AutoRoute(page: HomeViewRoute.page),
         AutoRoute(page: OnboardingViewRoute.page),
-  ];
+        AutoRoute(page: HomeButtonNavBarViewRoute.page),
+      ];
 }

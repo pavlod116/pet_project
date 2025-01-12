@@ -6,6 +6,9 @@ import 'package:pet_project/ui/style/colors.dart';
 
 const paddingH16 = EdgeInsets.symmetric(horizontal: 16);
 
+const gap8 = Gap(8);
+const gap10 = Gap(10);
+const gap12 = Gap(12);
 const gap14 = Gap(14);
 const gap16 = Gap(16);
 const gap24 = Gap(24);
