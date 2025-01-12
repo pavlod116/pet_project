@@ -103,23 +103,28 @@ class HomeViewPage extends StatelessWidget {
 
   Widget _buildVerticallyCard(BuildContext context) {
     final mediaQuery = MediaQuery.of(context);
+    final double screenWidth = mediaQuery.size.width;
+
+    final double titleFontSize = screenWidth * 0.055;
+    final double subtitleFontSize = screenWidth * 0.045;
+
     return Row(
       mainAxisSize: MainAxisSize.min,
       children: [
         Flexible(
           child: CustomHomeCard(
-            width: mediaQuery.size.width,
+            width: screenWidth,
             height: 211,
             child: Padding(
               padding: const EdgeInsets.all(20),
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  const Text(
+                  Text(
                     'Fast cash,\n zero fees',
                     style: TextStyle(
                       fontWeight: FontWeight.w900,
-                      fontSize: 22,
+                      fontSize: titleFontSize,
                       color: ProjectColors.activeYellowButton,
                     ),
                     textAlign: TextAlign.center,
@@ -138,18 +143,18 @@ class HomeViewPage extends StatelessWidget {
         gap14,
         Flexible(
           child: CustomHomeCard(
-            width: mediaQuery.size.width,
+            width: screenWidth,
             height: 211,
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 20),
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  const Text(
+                  Text(
                     'Apply,\n borrow, enjoy!',
                     style: TextStyle(
                       fontWeight: FontWeight.w900,
-                      fontSize: 18,
+                      fontSize: subtitleFontSize,
                       color: ProjectColors.activeYellowButton,
                     ),
                     textAlign: TextAlign.center,

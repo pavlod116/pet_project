@@ -2,7 +2,7 @@ import 'package:flutter/rendering.dart';
 import 'package:gap/gap.dart';
 import 'package:pet_project/ui/style/colors.dart';
 
-// const double bottomSheetHeight = 76;
+const double bottomSheetHeight = 76;
 
 const paddingH16 = EdgeInsets.symmetric(horizontal: 16);
 
@@ -16,3 +16,5 @@ const gap48 = Gap(48);
 
 const textBigSize = TextStyle(fontSize: 24, fontWeight: FontWeight.w900, color: ProjectColors.white);
 const textMediumSize = TextStyle(fontWeight: FontWeight.w500, fontSize: 20, color: ProjectColors.white);
+const textStyleTextWithPolicy = TextStyle(fontSize: 16, fontWeight: FontWeight.w900, color: ProjectColors.white);
+const textStyleDescriptionWithPolicy = TextStyle(fontSize: 16, fontWeight: FontWeight.w400, color: ProjectColors.white);
